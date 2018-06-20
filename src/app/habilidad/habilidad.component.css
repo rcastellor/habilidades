@@ -1,0 +1,17 @@
+.grid-habilidad {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100px 250px auto auto;
+    grid-template-rows: auto;
+    grid-template-areas: ". . . .";
+  }
+  
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  
+    .grid-habilidad {
+      display: -ms-grid;
+      -ms-grid-columns: 100px 250px auto auto;
+      -ms-grid-rows: auto;
+    }
+  
+  }

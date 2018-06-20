@@ -1,0 +1,21 @@
+<div class='grid-habilidad'>
+  <div>{{habilidad}}</div>
+  <div>
+    <input type="checkbox" 
+      *ngFor='let item of controlesGrado5; let i = index'
+      [checked]="item.activado"
+      (change)="seleccionaGrado5(i)"/>
+  </div>
+  <div>
+    <input type="checkbox"
+      *ngFor='let item of controlesGrado2; let i = index'
+      [checked]="item.activado"
+      (change)="seleccionaGrado2(10 + i)"/>
+  </div>
+  <div>
+    <input type="checkbox"
+      *ngFor='let item of controlesGrado1; let i = index'
+      [checked]="item.activado"
+      (change)="seleccionaGrado1(20 + i)"/>
+  </div>
+</div>
