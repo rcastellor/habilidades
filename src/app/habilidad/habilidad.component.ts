@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Habilidad } from '../modelo/habilidad';
+
 
 @Component({
   selector: 'app-habilidad',
@@ -8,9 +10,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HabilidadComponent implements OnInit {
 
   @Input() gradoMaximo: number;
-  @Input() habilidad: string;
   @Input() gradoSeleccionado: number;
   @Input() puntosDisponibles: number;
+  @Input() habilidad: Habilidad;
+
 
   HABILIDADES_GRADO5 = 10;
   HABILIDADES_GRADO2 = 10;
@@ -145,5 +148,8 @@ export class HabilidadComponent implements OnInit {
         break;
       }
     }
+    this.habilidad.total = Number(this.bonus) + Number(this.habilidad.caracteristica.total)
+                            + Number(this.habilidad.profesion) + Number(this.habilidad.objeto)
+                            + Number(this.habilidad.especial1) + Number(this.habilidad.especial2);
   }
 }

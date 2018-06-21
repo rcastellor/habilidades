@@ -1,9 +1,22 @@
-Grado contundentes: <input type="text" [(ngModel)]="contundentes" />
-<input type="button" (click)='actualizaContundentes()' value='Actualiza'/>
-Sin Armadura: {{habilidades[0].grado}}
+<div>
+  {{habilidades[0].objeto}} - {{habilidades[0].total}}
+</div>
+<div class="grid-habilidad">
+  <div>HABILIDADES</div>
+  <div>GRADOS 5%</div>
+  <div>GRADOS 2%</div>
+  <div></div>
+  <div>Grado</div>
+  <div>Carac.</div>
+  <div>Profesión</div>
+  <div>Objeto</div>
+  <div>Especial</div>
+  <div>Especial</div>
+  <div>Total</div>
+</div>
 <app-habilidad 
   *ngFor='let habilidad of habilidades'
-  [habilidad]='habilidad.habilidad'
+  [habilidad]='habilidad'
   [gradoMaximo]='habilidad.gradoMaximo'
   [puntosDisponibles]='1'
   [gradoSeleccionado]="habilidad.grado">
