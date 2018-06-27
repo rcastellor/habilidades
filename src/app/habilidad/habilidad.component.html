@@ -19,13 +19,23 @@
       (change)="seleccionaGrado1(20 + i)"/>
   </div>
   <div class='separador'><input type="text" value="{{bonus}}" readonly/></div>
-  <div class='separador'>AGI<input type="text" value=" {{habilidad.caracteristica.total}}" readonly/></div>
-  <div class='separador'><input type="text" value="{{habilidad.profesion}}" readonly/></div>
+  <div class='separador'>
+    {{habilidad.caracteristica}}<input type="text" 
+                [value]="habilidad.bonoCaracteristica" readonly/></div>
+  <div class='separador'><input type="text" 
+                [value]="habilidad.profesion" readonly/></div>
   <div class='separador'><input type="text" 
                             [(ngModel)]="habilidad.objeto"
                             pattern="\d*"
                             (change)="calculaBonusGradosHabilidad()"/></div>
-  <div class='separador'><input type="text" [(ngModel)]="habilidad.especial1" pattern="\d*"/></div>
-  <div class='separador'><input type="text" [(ngModel)]="habilidad.especial2" pattern="\d*"/></div>
-  <div class='separador'><input type="text" value="{{habilidad.total}}" readonly/>MM</div>
+  <div class='separador'><input type="text" 
+                            [(ngModel)]="habilidad.especial1"
+                            pattern="\d*"
+                            (change)="calculaBonusGradosHabilidad()"/></div>
+  <div class='separador'><input type="text"
+                            [(ngModel)]="habilidad.especial2"
+                            pattern="\d*"
+                            (change)="calculaBonusGradosHabilidad()"/></div>
+  <div class='separador'><input type="text"
+                  [value]="habilidad.total" readonly/>{{habilidad.tipoTirada}}</div>
 </div>

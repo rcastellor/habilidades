@@ -1,18 +1,16 @@
-<div>
-  {{habilidades[0].objeto}} - {{habilidades[0].total}}
-</div>
+<div class="general">
 <div class="grid-habilidad">
   <div>HABILIDADES</div>
   <div>GRADOS 5%</div>
   <div>GRADOS 2%</div>
-  <div></div>
-  <div>Grado</div>
-  <div>Carac.</div>
-  <div>Profesión</div>
-  <div>Objeto</div>
-  <div>Especial</div>
-  <div>Especial</div>
-  <div>Total</div>
+  <div class="tabla"></div>
+  <div class="tabla">Grado</div>
+  <div class="tabla">Carac.</div>
+  <div class="tabla">Profesión</div>
+  <div class="tabla">Objeto</div>
+  <div class="tabla">Especial</div>
+  <div class="tabla">Especial</div>
+  <div class="tabla">Total</div>
 </div>
 <app-habilidad 
   *ngFor='let habilidad of habilidades'
@@ -21,3 +19,4 @@
   [puntosDisponibles]='1'
   [gradoSeleccionado]="habilidad.grado">
 </app-habilidad>
+</div>

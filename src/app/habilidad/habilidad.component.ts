@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Habilidad } from '../modelo/habilidad';
+import { Habilidad } from '../modelo/habilidad.model';
 
 
 @Component({
@@ -148,7 +148,7 @@ export class HabilidadComponent implements OnInit {
         break;
       }
     }
-    this.habilidad.total = Number(this.bonus) + Number(this.habilidad.caracteristica.total)
+    this.habilidad.total = Number(this.bonus) + Number(this.habilidad.bonoCaracteristica)
                             + Number(this.habilidad.profesion) + Number(this.habilidad.objeto)
                             + Number(this.habilidad.especial1) + Number(this.habilidad.especial2);
   }

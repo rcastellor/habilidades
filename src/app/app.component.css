@@ -1,9 +1,16 @@
 .grid-habilidad {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 120px 150px 80px 20px 50px 60px 60px 60px 60px 60px 60px;
-    grid-template-rows: auto;
-    grid-template-areas: ". . . . . . . . . .";
-    font-size: 12px;
-    text-align: center;
-  }
+  display: grid;
+  height: 100%;
+  grid-template-columns: 120px 150px 80px 20px 50px 60px 60px 60px 60px 60px 60px;
+  grid-template-rows: auto;
+  grid-template-areas: ". . . . . . . . . .";
+  font-size: 12px;
+  text-align: center;
+}
+
+.tabla {
+  border-right: solid 1px;
+}
+.general {
+  border: solid 1px;
+}
